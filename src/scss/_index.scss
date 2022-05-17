@@ -1,0 +1,31 @@
+@import "./navbar";
+@import "./bg-image";
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// body {
+//   //   background-color: ;
+// }
+
+.app {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: rgb(4, 4, 27);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 30px !important;
+}
