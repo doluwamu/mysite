@@ -1,5 +1,7 @@
 @import "./navbar";
 @import "./bg-image";
+@import "./about-me.scss";
+@import "./projects";
 
 html {
   margin: 0;
@@ -7,15 +9,16 @@ html {
   box-sizing: border-box;
 }
 
-// body {
-//   //   background-color: ;
-// }
+body {
+  background-color: rgb(4, 4, 27);
+}
 
 .app {
   max-width: 1500px;
   margin: 0 auto;
   background-color: rgb(4, 4, 27);
   height: 100vh;
+  // overflow: hidden;
 }
 
 a {

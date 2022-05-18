@@ -1,41 +1,7 @@
-.nav-bar {
-  background-color: rgb(2, 34, 98);
-  display: flex;
-  padding: 5px;
-  justify-content: space-between;
-
-  .nav-logo {
-    color: rgb(173, 232, 246);
-    margin-top: 5px;
-    margin-left: 30px;
-    font-family: "Times New Roman", Times, serif;
-  }
-
-  .nav-items {
-    display: flex;
-    justify-content: space-between;
-    width: 550px;
-    // background-color: green;
-    margin-top: 12px;
-    margin-right: 40px;
-
-    .nav-item {
-      a {
-        color: rgb(125, 227, 250);
-        font-weight: bold;
-        // font-family: "Times New Roman", Times, serif;
-      }
-      &.cv {
-        margin-left: 40px;
-
-        a {
-          color: #fff;
-          background-color: #000;
-          padding: 9px 19px;
-          border-radius: 5px;
-          font-weight: lighter;
-        }
-      }
-    }
-  }
+.download-cv {
+  // background-color: #000;
+  padding: 4px 4px -3px;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
 }

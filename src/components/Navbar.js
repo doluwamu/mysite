@@ -4,9 +4,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="#000116" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="">
           <b>Doluwamu</b>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -18,10 +18,10 @@ const Header = () => {
             <Nav.Link className="text-white" href="#">
               Projects
             </Nav.Link>
-            <Nav.Link className="text-white" href="#">
+            <Nav.Link className="text-white me-5" href="#">
               Contact me
             </Nav.Link>
-            <Nav.Link className="text-white" href="#">
+            <Nav.Link className="text-white  download-cv bg-primary" href="#">
               Download my cv
             </Nav.Link>
           </Nav>
