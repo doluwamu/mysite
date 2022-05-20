@@ -1,0 +1,44 @@
+.contact-me {
+  margin: 0 auto;
+  margin-top: 90px;
+  max-width: 1200px;
+  //   background-color: green;
+  overflow: hidden;
+
+  .contact-header {
+    margin-bottom: 30px;
+    color: #fff;
+
+    h3 {
+      text-align: center;
+    }
+
+    .cnt-head-line {
+      padding: 2px;
+      background-color: #fff;
+      border-radius: 10px;
+      width: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  .contact-image {
+    height: 450px;
+    width: 400px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 767px) {
+    .contact-img-col {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    margin: 0 10px;
+    margin-top: 90px;
+  }
+}

@@ -1,3 +1,10 @@
+.navbar {
+  background-color: #000116;
+  position: sticky !important;
+  top: 0;
+  z-index: 111;
+  box-shadow: 0 0 4px 0.1px rgb(24, 24, 24);
+}
 .download-cv {
   // background-color: #000;
   padding: 4px 4px -3px;

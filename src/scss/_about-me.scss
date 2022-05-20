@@ -1,18 +1,21 @@
 .about-me {
-  background-color: rgb(0, 1, 22);
+  background-color: rgb(4, 4, 27);
   color: #fff !important;
   padding: 20px 25px;
   margin: 0 auto;
   margin-top: -70px;
   max-width: 1200px;
-  border-radius: 15px;
-  box-shadow: 0 0 6px 0.7px #000;
-  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  // box-shadow: 0 0 15px 0.1px #000;
+  overflow: hidden !important;
 
   .about-header {
     margin-bottom: 30px;
-    animation: movein 1.5s ease-in;
     animation-duration: 1.6s;
+    background-color: rgb(4, 4, 27);
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    animation: movein 1s ease-in;
 
     .abt-head-line {
       padding: 2px;
@@ -23,7 +26,7 @@
 
     @keyframes movein {
       from {
-        transform: translateX(-1200px);
+        transform: translateX(-200px);
       }
       to {
         transform: translateX(0);
@@ -31,21 +34,76 @@
     }
   }
 
-  .about-me-body {
-    .about-intro {
-      font-size: 18px;
-      line-height: 35px;
-      animation: slidein 1.5s ease-in;
-      animation-duration: 1.6s;
+  .abt-me-divs {
+    .abt-gen {
+      height: 400px;
+      background-size: cover;
+      margin: 10px 10px;
+      transition: 0.4s;
+      cursor: pointer;
 
-      @keyframes slidein {
-        from {
-          transform: translateX(2000px);
-        }
-        to {
-          transform: translateX(0);
-        }
+      h1 {
+        text-align: center;
+        line-height: 400px !important;
+      }
+
+      &:hover {
+        transform: scale(1.04);
       }
     }
+    // .row {
+    .abt-tech {
+      background: url("../../public/images/call1.avif") rgb(62, 61, 61);
+      background-blend-mode: multiply;
+      animation: movein-abt-tech 2s;
+    }
+
+    @keyframes movein-abt-tech {
+      from {
+        transform: translateX(-500px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .abt-other {
+      background: url("../../public/images/call3.avif") rgb(62, 61, 61);
+      background-blend-mode: multiply;
+      animation: movein-abt-other 2s;
+    }
+
+    @keyframes movein-abt-other {
+      from {
+        transform: translateX(500px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  // }
+
+  // .about-me-body {
+  //   .about-intro {
+  //     font-size: 18px;
+  //     line-height: 35px;
+  //     animation: slidein 1.5s ease-in;
+  //     animation-duration: 1.6s;
+
+  //     @keyframes slidein {
+  //       from {
+  //         transform: translateX(1400px);
+  //       }
+  //       to {
+  //         transform: translateX(0);
+  //       }
+  //     }
+  //   }
+  // }
+
+  @media screen and (max-width: 1220px) {
+    margin: 0 5px;
+    margin-top: -70px;
   }
 }

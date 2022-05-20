@@ -11,6 +11,7 @@
     // background-color: green;
     padding: 4px;
     margin-top: 15px;
+    overflow-x: hidden;
 
     .intro-texts {
       margin-top: 50px;
@@ -29,7 +30,7 @@
       }
       @keyframes move-texts {
         from {
-          margin-top: -500px;
+          margin-top: -200px;
         }
         to {
           margin-top: 50px;
@@ -53,11 +54,11 @@
 
       @keyframes movein {
         from {
-          transform: translateX(-1200px);
+          transform: translateX(-300px);
           //   z-index: -111;
         }
         to {
-          transform: translateX(1px);
+          transform: translateX(0px);
           //   z-index: 111;
         }
       }
@@ -101,6 +102,31 @@
   }
 
   @media screen and (max-width: 599px) {
-    padding: 10px 0 40px;
+    padding: 10px 0 50px;
+    .bg-image {
+      img {
+        border-radius: 5px;
+      }
+    }
   }
 }
+
+// padding: 10px 0 0px;
+// background: url("../../public/images/call3.avif") #000;
+// background-color: #000;
+// background-size: cover;
+// background-blend-mode: multiply;
+
+// .intros {
+//   // background-color: green;
+//   // margin: 100px 0 250px;
+//   .intro-texts {
+//     .intro {
+//       // color: rgb(4, 4, 27);
+//     }
+//   }
+
+//   .intro-line {
+//     // background-color: rgb(4, 4, 27);
+//   }
+// }

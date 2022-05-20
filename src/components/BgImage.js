@@ -12,7 +12,7 @@ const BgImage = () => {
       </div>
 
       <div className="bg-image">
-        <img src="/images/img.jpg" alt="img" />
+        <img src="/images/call3.avif" alt="img" />
       </div>
     </div>
   );

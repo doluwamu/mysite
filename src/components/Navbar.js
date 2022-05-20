@@ -4,10 +4,10 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="#000116" variant="dark">
+    <Navbar collapseOnSelect expand="lg" className="py-3" variant="dark">
       <Container>
         <Navbar.Brand href="">
-          <b>Doluwamu</b>
+          <b className="fs-3">Doluwamu</b>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

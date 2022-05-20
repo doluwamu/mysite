@@ -2,6 +2,7 @@
 @import "./bg-image";
 @import "./about-me.scss";
 @import "./projects";
+@import "./contact-me";
 
 html {
   margin: 0;
@@ -10,19 +11,20 @@ html {
 }
 
 body {
-  background-color: rgb(4, 4, 27);
+  background-color: rgb(4, 4, 27) !important;
 }
 
 .app {
   max-width: 1500px;
   margin: 0 auto;
-  background-color: rgb(4, 4, 27);
-  height: 100vh;
+  background-color: rgb(4, 4, 27) !important;
+  min-height: 100vh;
   // overflow: hidden;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #fff !important;
 }
 
 li {

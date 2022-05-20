@@ -9,15 +9,15 @@ const Projects = () => {
         <div className="proj-head-line"></div>
       </div>
 
-      <Row className="d-flex justify-content-center align-items-start">
+      <Row className="d-flex justify-content-left align-items-start">
         <Col
-          sm={12}
+          sm={11}
           md={6}
           lg={4}
           //   xl={3}
           //   className="d-flex justify-content-evenly align-items-center"
         >
-          <Card className="my-3 rounded">
+          <Card className="my-3 project-card rounded" bg="#04041b">
             <Card.Img variant="top" src="/images/img.jpg" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -28,13 +28,13 @@ const Projects = () => {
         </Col>
 
         <Col
-          sm={12}
+          sm={11}
           md={6}
           lg={4}
           //   xl={3}
           //   className="d-flex justify-content-evenly align-items-center"
         >
-          <Card className="my-3  rounded">
+          <Card className="my-3 project-card  rounded" bg="#04041b">
             <Card.Img variant="top" src="/images/img.jpg" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
@@ -45,13 +45,13 @@ const Projects = () => {
         </Col>
 
         <Col
-          sm={12}
+          sm={11}
           md={6}
           lg={4}
           //   xl={3}
           //   className="d-flex justify-content-evenly align-items-center"
         >
-          <Card className="my-3  rounded">
+          <Card className="my-3 project-card  rounded" bg="#04041b">
             <Card.Img variant="top" src="/images/img.jpg" />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>

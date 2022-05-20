@@ -1,4 +1,6 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
@@ -8,28 +10,20 @@ const AboutMe = () => {
         <div className="abt-head-line"></div>
       </div>
 
-      <div className="about-me-body">
-        <p className="about-intro">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque fugiat
-          quis aspernatur adipisci dolores sint ducimus repellendus provident
-          quas saepe. Reiciendis ipsum fugiat laudantium asperiores, in expedita
-          necessitatibus nobis nisi. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Eaque fugiat quis aspernatur adipisci dolores sint
-          ducimus repellendus provident quas saepe. Reiciendis ipsum fugiat
-          laudantium asperiores, in expedita necessitatibus nobis nisi. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Eaque fugiat quis
-          aspernatur adipisci dolores sint ducimus repellendus provident quas
-          saepe. Reiciendis ipsum fugiat laudantium asperiores, in expedita
-          necessitatibus nobis nisi. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Eaque fugiat quis aspernatur adipisci dolores sint
-          ducimus repellendus provident quas saepe. Reiciendis ipsum fugiat
-          laudantium asperiores, in expedita necessitatibus nobis nisi. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Eaque fugiat quis
-          aspernatur adipisci dolores sint ducimus repellendus provident quas
-          saepe. Reiciendis ipsum fugiat laudantium asperiores, in expedita
-          necessitatibus nobis nisi.
-        </p>
-      </div>
+      <Row className="d-flex justify-content-around abt-me-divs">
+        <Col sm={9} md={5} lg={5} className="abt-tech abt-gen">
+          <Link to="/">
+            <h1>Tech</h1>
+            <div className="abt-tech-line"></div>
+          </Link>
+        </Col>
+
+        <Col sm={9} md={5} lg={5} className="abt-other abt-gen">
+          <Link to="/">
+            <h1>Other</h1>
+          </Link>
+        </Col>
+      </Row>
     </div>
   );
 };
