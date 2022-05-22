@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
+import projects from "../data/projects";
 
 const Projects = () => {
   return (
@@ -10,56 +11,36 @@ const Projects = () => {
       </div>
 
       <Row className="d-flex justify-content-left align-items-start">
-        <Col
-          sm={11}
-          md={6}
-          lg={4}
-          //   xl={3}
-          //   className="d-flex justify-content-evenly align-items-center"
-        >
-          <Card className="my-3 project-card rounded" bg="#04041b">
-            <Card.Img variant="top" src="/images/img.jpg" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col
-          sm={11}
-          md={6}
-          lg={4}
-          //   xl={3}
-          //   className="d-flex justify-content-evenly align-items-center"
-        >
-          <Card className="my-3 project-card  rounded" bg="#04041b">
-            <Card.Img variant="top" src="/images/img.jpg" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        <Col
-          sm={11}
-          md={6}
-          lg={4}
-          //   xl={3}
-          //   className="d-flex justify-content-evenly align-items-center"
-        >
-          <Card className="my-3 project-card  rounded" bg="#04041b">
-            <Card.Img variant="top" src="/images/img.jpg" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>Some quick example text to build</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </Col>
+        {projects.map((project) => (
+          <Col
+            sm={11}
+            md={6}
+            lg={4}
+            key={project.id}
+            //   xl={3}
+            //   className="d-flex justify-content-evenly align-items-center"
+          >
+            <Card className="my-3 project-card rounded" bg="#04041b">
+              <Card.Img
+                style={{ height: "210px", cursor: "pointer" }}
+                onClick={() => window.open(project.siteUrl, "_blank").focus()}
+                variant="top"
+                src={project.image}
+              />
+              <Card.Body>
+                <Card.Title>{project.name}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => window.open(project.github, "_blank").focus()}
+                  className="btn btn-primary"
+                >
+                  <i className="fab fa-github"></i>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </div>
   );
