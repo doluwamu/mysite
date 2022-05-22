@@ -16,22 +16,24 @@ const ContactMe = () => {
         <Col sm={10} md={5} className="p-3">
           <Form>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="text-white">Name:</Form.Label>
+              <Form.Label className="text-white">Name :</Form.Label>
               <Form.Control type="text" placeholder="Enter name" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="text-white">Email:</Form.Label>
+              <Form.Label className="text-white">Email :</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="text-white">Subject:</Form.Label>
+              <Form.Label className="text-white">
+                Subject (<span style={{ color: "red" }}>optional*</span>) :
+              </Form.Label>
               <Form.Control type="text" placeholder="Enter subject" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className="text-white">Message:</Form.Label>
+              <Form.Label className="text-white">Message :</Form.Label>
 
               <Form.Control
                 as="textarea"
