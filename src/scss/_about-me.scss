@@ -15,7 +15,7 @@
     background-color: rgb(4, 4, 27);
     padding: 10px;
     border-radius: 15px 15px 0 0;
-    animation: movein 1s ease-in;
+    animation: movein 0.5s ease-in;
 
     .abt-head-line {
       padding: 2px;
@@ -39,7 +39,7 @@
       height: 400px;
       background-size: cover;
       margin: 10px 10px;
-      transition: 0.4s;
+      transition: 0.3s;
       cursor: pointer;
 
       h1 {
@@ -48,14 +48,14 @@
       }
 
       &:hover {
-        transform: scale(1.04);
+        transform: scale(1.03);
       }
     }
     // .row {
     .abt-tech {
-      background: url("../../public/images/call1.avif") rgb(62, 61, 61);
+      background: url("../../public/images/tech1.avif") rgb(62, 61, 61);
       background-blend-mode: multiply;
-      animation: movein-abt-tech 2s;
+      animation: movein-abt-tech 1s;
     }
 
     @keyframes movein-abt-tech {
@@ -68,9 +68,9 @@
     }
 
     .abt-other {
-      background: url("../../public/images/call3.avif") rgb(62, 61, 61);
+      background: url("../../public/images/call1.avif") rgb(62, 61, 61);
       background-blend-mode: multiply;
-      animation: movein-abt-other 2s;
+      animation: movein-abt-other 1s;
     }
 
     @keyframes movein-abt-other {
