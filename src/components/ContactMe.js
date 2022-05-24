@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Button, Col, Form, Image, Row } from "react-bootstrap";
 import validator from "validator";
+import { firstLetterToUpperCase } from "../helpers/wordHelpers";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
@@ -46,7 +47,7 @@ const ContactMe = () => {
           subject && subject.length > 0 ? subject : "Just want to connect",
         message,
       });
-      setContactRes(data.message);
+      setContactRes(firstLetterToUpperCase(data.message));
       setName("");
       setEmail("");
       setSubject("");
@@ -58,7 +59,7 @@ const ContactMe = () => {
 
   return (
     <div className="contact-me">
-      <div className="contact-header">
+      <div className="contact-header" data-aos="fade-up" data-aos-once={true}>
         <h3>Contact me</h3>
         <div className="cnt-head-line"></div>
       </div>
@@ -67,12 +68,31 @@ const ContactMe = () => {
         style={{ marginTop: "60px" }}
         className="d-flex justify-content-around"
       >
-        <Col sm={10} md={5} className="p-3">
+        <Col
+          sm={10}
+          md={5}
+          className="p-3"
+          data-aos="fade-up"
+          data-aos-once={true}
+        >
           <Form onSubmit={submitContactInfo}>
             {contactRes && contactRes.length > 0 && (
-              <div className="alert alert-success mb-2">
-                <span className="me-auto">{contactRes}</span>
-                <span onClick={() => setContactRes("")}>x</span>
+              <div
+                className="alert mb-2"
+                style={{
+                  backgroundColor: "green",
+                  color: "#fff",
+                  border: "none",
+                }}
+              >
+                <span
+                  style={{ cursor: "pointer" }}
+                  className="me-5"
+                  onClick={() => setContactRes("")}
+                >
+                  X
+                </span>
+                <span className="cancel-icon ">{contactRes}</span>
               </div>
             )}
 
@@ -138,7 +158,12 @@ const ContactMe = () => {
           </Form>
         </Col>
 
-        <Col md={4} className="p-3 contact-img-col">
+        <Col
+          md={4}
+          className="p-3 contact-img-col"
+          data-aos="fade-up"
+          data-aos-once={true}
+        >
           <Image
             className="contact-image"
             src="/images/call4.avif"

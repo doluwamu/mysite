@@ -5,7 +5,11 @@ import projects from "../data/projects";
 const Projects = () => {
   return (
     <div className="projects">
-      <div className="projects-header header">
+      <div
+        className="projects-header header"
+        data-aos="fade-up"
+        data-aos-once={true}
+      >
         <h3>Projects</h3>
         <div className="proj-head-line"></div>
       </div>
@@ -20,7 +24,12 @@ const Projects = () => {
             //   xl={3}
             //   className="d-flex justify-content-evenly align-items-center"
           >
-            <Card className="my-3 project-card rounded" bg="#04041b">
+            <Card
+              className="my-3 project-card rounded"
+              bg="#04041b"
+              data-aos="fade-up"
+              data-aos-once={true}
+            >
               <Card.Img
                 style={{ height: "210px", cursor: "pointer" }}
                 onClick={() => window.open(project.siteUrl, "_blank").focus()}
