@@ -4,7 +4,7 @@ import projects from "../data/projects";
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="my-projects">
       <div
         className="projects-header header"
         data-aos="fade-up"

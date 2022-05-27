@@ -12,7 +12,10 @@ const BgImage = () => {
       </div>
 
       <div className="bg-image">
-        <img src="/images/call3.avif" alt="img" />
+        <img
+          src="https://res.cloudinary.com/book-with-me-react/image/upload/v1653421219/IMG_20220524_195618_o2lwpx.jpg"
+          alt="img"
+        />
       </div>
     </div>
   );

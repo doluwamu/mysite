@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Button, Col, Form, Image, Row } from "react-bootstrap";
+import { Button, Col, Form, Image, Row, Alert } from "react-bootstrap";
 import validator from "validator";
 import { firstLetterToUpperCase } from "../helpers/wordHelpers";
 
@@ -11,6 +11,7 @@ const ContactMe = () => {
   const [message, setMessage] = useState("");
 
   const [contactRes, setContactRes] = useState("");
+  const [contactErr, setContactErr] = useState("");
 
   const [nameRequiredError, setNameRequiredError] = useState(false);
   const [emailRequiredError, setEmailRequiredError] = useState(false);
@@ -53,12 +54,16 @@ const ContactMe = () => {
       setSubject("");
       setMessage("");
     } catch (err) {
-      console.log(err);
+      if (err.message.includes("Network")) {
+        setContactErr("Ooops, check your internet connection :(");
+      } else {
+        setContactErr("Ooops, something went wrong :(");
+      }
     }
   };
 
   return (
-    <div className="contact-me">
+    <div className="contact-me" id="contact-me">
       <div className="contact-header" data-aos="fade-up" data-aos-once={true}>
         <h3>Contact me</h3>
         <div className="cnt-head-line"></div>
@@ -77,23 +82,25 @@ const ContactMe = () => {
         >
           <Form onSubmit={submitContactInfo}>
             {contactRes && contactRes.length > 0 && (
-              <div
-                className="alert mb-2"
-                style={{
-                  backgroundColor: "green",
-                  color: "#fff",
-                  border: "none",
-                }}
+              <Alert
+                className="mb-2"
+                variant="success"
+                onClose={() => setContactRes("")}
+                dismissible
               >
-                <span
-                  style={{ cursor: "pointer" }}
-                  className="me-5"
-                  onClick={() => setContactRes("")}
-                >
-                  X
-                </span>
                 <span className="cancel-icon ">{contactRes}</span>
-              </div>
+              </Alert>
+            )}
+
+            {contactErr && contactErr.length > 0 && (
+              <Alert
+                className="mb-2"
+                variant="danger"
+                onClose={() => setContactErr("")}
+                dismissible
+              >
+                <span className="cancel-icon ">{contactErr}</span>
+              </Alert>
             )}
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
