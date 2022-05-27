@@ -24,12 +24,11 @@
     padding-right: 6px !important;
   }
 
-  .dropdown-icon {
-    margin-top: 3.2px;
+  .dropdown-menu {
+    max-width: 300px !important;
 
-    .dropdown-toggle {
-      padding: 7px 0 !important;
-      padding-right: 8px !important;
+    .dropdown-item {
+      color: #000 !important;
     }
   }
 

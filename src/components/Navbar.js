@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -8,7 +7,7 @@ const Header = () => {
 
   const changeNavbarColor = () => {
     const scrollValue = window.scrollY;
-    if (scrollValue < 490) {
+    if (scrollValue < 400) {
       setNavbarColor(false);
     } else {
       setNavbarColor(true);
@@ -41,22 +40,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Item className="text-white">
-              <Nav.Link href="/#about-me" className="about-me-link">
-                About me
-              </Nav.Link>
-            </Nav.Item>
-            <NavDropdown className="text-white dropdown-icon">
-              <NavDropdown.ItemText>
-                <Link to="/about-me/tech" className="dropdown-link">
-                  Tech
-                </Link>
-              </NavDropdown.ItemText>
-              <NavDropdown.ItemText>
-                <Link to="/about-me/other" className="dropdown-link">
-                  Other
-                </Link>
-              </NavDropdown.ItemText>
+            <NavDropdown title="About me" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/about-me/tech">Tech</NavDropdown.Item>
+              <NavDropdown.Item href="/about-me/other">Other</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className="text-white" href="#my-projects">
               Projects
@@ -64,7 +50,12 @@ const Header = () => {
             <Nav.Link className="text-white me-5" href="#contact-me">
               Contact me
             </Nav.Link>
-            <Nav.Link className="text-white  download-cv bg-primary" href="#">
+            <Nav.Link
+              className="text-white  download-cv bg-primary"
+              href="/docs/ADEITAN_DOLUWAMU_CV.PDF"
+              target="_blank"
+              rel="noreferrer"
+            >
               Download my cv
             </Nav.Link>
           </Nav>

@@ -8,36 +8,29 @@ const Footer = () => {
         <h3 className="text-white">Doluwamu</h3>
 
         <div>
-          <b
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window
-                .open(
-                  "https://www.linkedin.com/in/doluwamu-adeitan-41bab5201/",
-                  "_blank",
-                )
-                .focus()
-            }
+          <a
+            href={"https://www.linkedin.com/in/doluwamu-adeitan-41bab5201/"}
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fab fa-linkedin me-3"></i>
-          </b>
-          <b
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window.open("https://twitter.com/Doluwamu4", "_blank").focus()
-            }
+          </a>
+
+          <a
+            href={"https://twitter.com/Doluwamu4"}
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fab fa-twitter me-3"></i>
-          </b>
+          </a>
 
-          <b
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window.open("https://github.com/doluwamu", "_blank").focus()
-            }
+          <a
+            href="https://github.com/doluwamu"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fab fa-github"></i>
-          </b>
+          </a>
         </div>
       </Container>
     </div>

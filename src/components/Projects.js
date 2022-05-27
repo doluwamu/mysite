@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import projects from "../data/projects";
 
 const Projects = () => {
@@ -30,22 +31,25 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-once={true}
             >
-              <Card.Img
-                style={{ height: "210px", cursor: "pointer" }}
-                onClick={() => window.open(project.siteUrl, "_blank").focus()}
-                variant="top"
-                src={project.image}
-              />
+              <a href={project.siteUrl} target="_blank" rel="noreferrer">
+                <Card.Img
+                  style={{ height: "210px", cursor: "pointer" }}
+                  variant="top"
+                  src={project.image}
+                />
+              </a>
               <Card.Body>
                 <Card.Title>{project.name}</Card.Title>
                 <Card.Text>{project.description}</Card.Text>
-                <div
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
                   style={{ cursor: "pointer" }}
-                  onClick={() => window.open(project.github, "_blank").focus()}
                   className="btn btn-primary"
                 >
                   <i className="fab fa-github"></i>
-                </div>
+                </a>
               </Card.Body>
             </Card>
           </Col>

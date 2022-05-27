@@ -37,22 +37,25 @@ const ContactMe = () => {
     }
 
     try {
-      const contactInstance = axios.create({
-        baseURL: "https://doluwamu0r2.herokuapp.com",
-      });
-
-      const { data } = await contactInstance.post("/api/contact", {
-        name,
-        email,
-        subject:
-          subject && subject.length > 0 ? subject : "Just want to connect",
-        message,
-      });
+      const { data } = await axios.post(
+        "https://doluwamu0r2.herokuapp.com/api/contact",
+        {
+          name,
+          email,
+          subject:
+            subject && subject.length > 0 ? subject : "Just want to connect",
+          message,
+        },
+      );
       setContactRes(firstLetterToUpperCase(data.message));
       setName("");
       setEmail("");
       setSubject("");
       setMessage("");
+      setNameRequiredError(false);
+      setEmailRequiredError(false);
+      setEmailInvalidError(false);
+      setMessageRequiredError(false);
     } catch (err) {
       if (err.message.includes("Network")) {
         setContactErr("Ooops, check your internet connection :(");

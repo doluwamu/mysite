@@ -13,7 +13,7 @@ const BgImage = () => {
 
       <div className="bg-image">
         <img
-          src="https://res.cloudinary.com/book-with-me-react/image/upload/v1653421219/IMG_20220524_195618_o2lwpx.jpg"
+          src="https://res.cloudinary.com/book-with-me-react/image/upload/v1653672036/IMG_20220524_195618-removebg-preview_sa2gtc.png"
           alt="img"
         />
       </div>
@@ -22,3 +22,5 @@ const BgImage = () => {
 };
 
 export default BgImage;
+
+// "https://res.cloudinary.com/book-with-me-react/image/upload/v1653421219/IMG_20220524_195618_o2lwpx.jpg"

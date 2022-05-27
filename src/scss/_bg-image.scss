@@ -36,9 +36,9 @@
         }
       }
 
-      // @media screen and (min-width: 600px) {
-      //   margin-top: 50px;
-      // }
+      @media screen and (min-width: 600px) {
+        margin-top: 50px;
+      }
     }
 
     .intro-line {
@@ -68,18 +68,18 @@
   }
 
   .bg-image {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     // margin-top: -30px;
-    margin-bottom: 30px;
+    margin-bottom: 150px;
     // background-color: red;
 
     img {
-      width: 250px;
+      width: 200px;
       height: 250px;
-      border-radius: 50%;
-      margin-top: 20px;
-      margin-left: 9%;
+      // border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 2%;
       animation-name: move-img;
       animation-duration: 1s;
       animation-delay: 0.5;
@@ -95,7 +95,16 @@
     }
 
     @media screen and (min-width: 600px) {
-      margin-top: 60px;
+      // margin-top: 60px !important;
+      width: 300px;
+      height: 300px;
+      // margin-top: -30px;
+      margin-bottom: 30px;
+
+      img {
+        width: 300px !important;
+        height: 350px !important;
+      }
     }
   }
 
